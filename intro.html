@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<div id ="intro">
+	<div id ="intro_screen1" class="intro_screen" style="display:block">
+		<h1>Welcome</h1>
+		<p>
+		This is a computer simulation to give a taste of what an Artificial Intelligence can do.
+		</p>
+		<p>
+		Right now, your computer only knows how to display this webpage, we are going to enhance it, please click next
+		</p>
+		<div class="intro-button" onclick="$('#intro_screen1').hide();$('#intro_screen2').show();">Next</div>
+	</div>
+	<div id ="intro_screen2" class="intro_screen">
+		<h1>Artificial brain uploaded</h1>
+		<p>
+		We just added a basic artificial neural network, called Perceptron, to this webpage. Right now, it is like a newborn, the program
+		doesn't know anything and need to learn.
+		</p>
+		<p>
+		Learning takes time, but computers can share their knowledge between them. Click next.
+		</p>
+		<div class="intro-button" onclick="$('#intro_screen2').hide();$('#intro_screen3').show();">Next</div>
+	</div>
+	<div id ="intro_screen3" class="intro_screen">
+		<h1>Skill uploaded</h1>
+		<p>
+		We have trained another computer to recognize handwritten digits by showing it 60 000 different pictures of digits, it learned to recognize them and now this abilty has been transfered to this webpage.
+		<p>
+		This website can know recognize a digit by just watching an image of it.
+		This is a basic skill and you, human, can do it easily, but are you faster than your computer?
+		</p>
+		<p>
+		We are going now to show you 3 pictures with three different handwritten digits, you must discover the "1" and click on it. <br/>Then 3 other pictures will be showed to you, you will have to recognize the "2". <br/>Then the "3", and the "4" etc. <br/>After the "9", you will have to recognize the "0". We will then repeat and have to recognize the "1" again.
+		</p>
+		<p>
+		You have 10 seconds to recognize the more digits you can. At the same time, your computer will pass the same test. Will you faster than your computer.
+		</p>
+		<div class="intro-button" onclick="document.location='index.html'">Next</div>
+	</div>
+</div>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<style>
+html, body {
+    height:100%; /*both html and body*/
+}
+body{
+margin: 0;
+padding: 0;
+}
+#intro{
+	color:white;
+	font-size: 20px;
+	height: 100%;
+ 	background: #1D1D1D url(https://s-media-cache-ak0.pinimg.com/originals/43/9a/86/439a8627f8fe40c625a20b711b326ee2.gif) no-repeat right top;
+}
+.intro_screen{
+	display: none;
+	padding: 10px;
+	padding-top: 200px;
+ height: 100%;
+}
+.intro_screen h1{
+	font-weight: 30px;
+}
+.intro-button{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeeeee+0,cccccc+100;Gren+3D */
+background: rgb(238,238,238); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+color:black;
+	width:200px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+
+}
+</style>
+</body>
+</html>

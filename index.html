@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="js/data.js"></script>
+	<script src="js/game.js"></script>
+	<script src="js/perceptron.js"></script>
+</head>
+<body>
+<div id="playerboard">
+	<div id="timer">TIME LEFT : <div id="timercount"></div></div>
+	<div id="score"></div>
+	<canvas id="drawingPad1" class="player_pad" width="280" height="280" ></canvas>
+	<canvas id="drawingPad2" class="player_pad" width="280" height="280"></canvas>
+	<canvas id="drawingPad3" class="player_pad" width="280" height="280"></canvas>	
+	<div id="findthe"></div>
+</div>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<style>
+html, body {
+    height:100%; /*both html and body*/
+}
+body{
+margin: 0;
+padding: 0;
+}
+#playerboard{
+	width:900px;
+}
+.player_pad{
+	cursor: pointer;
+	border:5px solid black;
+}
+#findthe{
+	text-align: center;
+	font-weight: bold;
+	font-size: 35px;
+}
+
+#score{
+	text-align: right;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 25px;
+	padding: 10px 5px;
+	border:red 1px red solid;
+	color:red;
+}
+</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			Perceptron.loadBackup();
+			Data.loadTestSet(function(){
+				Game.setPlayerMode();
+				//Game.setCPUMode();
+				Game.startQuizz();
+			});
+		    
+		});
+	</script>
+
+</body>
+</html>
